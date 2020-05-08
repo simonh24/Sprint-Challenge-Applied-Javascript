@@ -17,3 +17,36 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+function carouselMaker() {
+  const divCarousel = document.createElement("div");
+  const divLeftButton = document.createElement("div");
+  const imgOne = document.createElement("img");
+  const imgTwo = document.createElement("img");
+  const imgThree = document.createElement("img");
+  const imgFour = document.createElement("img");
+  const divRightButton = document.createElement("div");
+
+  divCarousel.classList.add("carousel");
+  divLeftButton.classList.add("left-button");
+  divRightButton.classList.add("right-button");
+
+  divLeftButton.textContent = " < ";
+  divRightButton.textContent = " > ";
+
+  imgOne.setAttribute("src", "./assets/carousel/mountains.jpeg");
+  imgTwo.setAttribute("src", "./assets/carousel/computer.jpeg");
+  imgThree.setAttribute("src", "./assets/carousel/trees.jpeg");
+  imgFour.setAttribute("src", "./assets/carousel/turntable.jpeg");
+
+  divCarousel.appendChild(divLeftButton);
+  divCarousel.appendChild(imgOne);
+  divCarousel.appendChild(imgTwo);
+  divCarousel.appendChild(imgThree);
+  divCarousel.appendChild(imgFour);
+  divCarousel.appendChild(divRightButton);
+  return divCarousel;
+}
+
+console.log("hi");
+document.querySelector("div.carousel-container").appendChild(carouselMaker());
